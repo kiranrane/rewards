@@ -46,7 +46,7 @@ public class RewardsService {
 		Set<String> customerNames = vouchers.stream().map(Voucher::getFullName).collect(Collectors.toSet());
 		// Get the set of customer names having Credits with them, and combine
 		// the two
-		customerNames.addAll(vouchers.stream().map(Voucher::getFullName).collect(Collectors.toSet()));
+		customerNames.addAll(credits.stream().map(Credit::getFullName).collect(Collectors.toSet()));
 		List<Reward> rewards = new ArrayList<>();
 		String[] name;
 
